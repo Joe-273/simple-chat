@@ -9,6 +9,10 @@ const validateLoginPwd = new Validator($("#txtLoginPwd"), async (value) => {
   if (!value) {
     return "密码不能为空";
   }
+   const resp = await API.login(value);
+  if (resp.code === 400) {
+    return "账号或密码错误";
+  }
 });
 
 // 如果有临时保存（注册后保存）的LoginId，自动填充到表单中
