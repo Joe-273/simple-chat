@@ -9,7 +9,11 @@ const validateLoginPwd = new Validator($("#txtLoginPwd"), async (value) => {
   if (!value) {
     return "密码不能为空";
   }
-  const resp = await API.login(value);
+  const userDataObj = {
+    loginId: validateLoginId.form.value,
+    loginPwd: value,
+  };
+  const resp = await API.login(userDataObj);
   if (resp.code === 400) {
     return "账号或密码错误";
   }
