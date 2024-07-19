@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>聊天-ChatRobot</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div class="container">
+      <div class="chatArea">
+        <div class="topTitle">
+          <i id="logout" class="iconfont">&#xe685;</i>
+          <h1>菲菲</h1>
+          <i class="iconfont">&#xe66e;</i>
+        </div>
+        <div class="messageContent"></div>
+        <form class="sendMessage">
+          <i class="iconfont">&#xe678;</i>
+          <input
+            type="text"
+            id="txtMsg"
+            name="content"
+            placeholder="在这里输入要发送的消息，按回车键即可发送"
+          />
+          <button>发送</button>
+          <i class="iconfont">&#xe66a;</i>
+          <i class="iconfont">&#xe664;</i>
+        </form>
+      </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+.userForm {
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 280px;
+  padding: 36px 20px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background-color: transparent;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2), inset 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.userForm .title {
+  padding-left: 8px;
+  width: 100%;
+  font-size: 28px;
+  color: #eee;
+  user-select: none;
+  font-family: "幼圆";
+}
+.userForm .title span {
+  animation: flash ease-in-out 0.25s alternate infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.userForm .title .iconfont {
+  font-size: 36px;
+  color: #eee;
+}
+.userForm .iconfont {
+  font-size: 24px;
+  padding-left: 8px;
+}
+.userForm .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  background-color: #eee;
+  width: 100%;
+  border-radius: 18px;
+  margin-top: 24px;
+  position: relative;
+}
+.userForm .form-group .txt {
+  flex-grow: 1;
+  background-color: transparent;
+  padding-left: 5px;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.userForm .form-group .err {
+  position: absolute;
+  font-size: 12px;
+  top: 38px;
+  left: 14px;
+}
+.userForm .form-group .err.right {
+  color: #2ba245;
+}
+.userForm .form-group .err.fault {
+  color: #f20;
+}
+.userForm .form-group .submit {
+  height: 100%;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 0 18px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.userForm .form-group:last-child {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #eee;
+  font-weight: 200;
+}
+.userForm .form-group:last-child a {
+  display: inline-block;
+  color: #eee;
+  text-decoration: none;
+  height: 18px;
+  border-bottom: 1px solid #fff;
+}
