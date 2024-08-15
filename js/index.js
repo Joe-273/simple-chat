@@ -119,7 +119,10 @@ const init = async () => {
   // 如果请求不到用户信息，则弹出模态，并且删除主体内容
   const userProfile = await API.profile();
   if (!userProfile || userProfile.code !== 0) {
-    openModal("登录已过期", true);
+    // 不要弹出模态了，影响体验
+    // openModal("登录已过期", true);
+    // 直接回到登陆页面
+     location.href = "./login.html";
     return;
   }
   // 登录成功，获取历史聊天记录
